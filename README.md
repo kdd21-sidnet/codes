@@ -65,7 +65,7 @@ The hyperparameters are stored at `./pretrained/${DATASET}/param.json`.
     - `hid-dim` (d): hidden feature dimension
 
 | **Hyperparameter** | **Bitcoin-Alpha** | **Bitcoin-OTC** | **Wikipedia** | **Slashdot** | **Epinions** |
-| :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 | `num-layers` (L) | 1 | 2 | 2 | 2 | 2 |
 | `c` | 0.35 | 0.25 | 0.5 | 0.55 | 0.55 |
 | `num-diff-layers` (K) | 10 | 10 | 10 | 10 | 10 |
