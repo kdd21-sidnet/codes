@@ -1,8 +1,22 @@
 # SidNet
 
 This is a PyTorch implementation of **Signed Diffusion Network** (submitted to KDD 2021).
-This paper proposes a novel graph neural network that achieves end-to-end node representation learning 
-for link sign prediction in signed social graphs.
+
+## Overview
+How can we model node representations to accurately infer the signs of missing edges in a signed social graph?
+Signed social graphs have attracted considerable attention to model trust relationships between people.
+Various representation learning methods such as network embedding and graph convolutional network (GCN) have been proposed to analyze signed graphs.
+However, existing network embedding models are not end-to-end for a specific task, and GCN-based models exhibit a performance degradation issue when their depth increases.
+
+In this paper, we propose Signed Diffusion Network (SidNet), a novel graph neural network that achieves end-to-end node representation learning for link sign prediction in signed social graphs.
+Our main contributions are summarized as follows:
+* **Method.** We design SidNet, an end-to-end  representation learning method in a signed graph with multiple signed diffusion layers. Our signed diffusion layer exploits signed random walks to propagate node embeddings on signed edges, and injects local features. This enables SidNet to learn distinguishable node embeddings effectively considering multi-hop neighbors while preserving local information.
+* **Analysis.** We theoretically analyze the convergence property of our signed diffusion layer, showing how SidNet prevents the over-smoothing issue.
+We also provide the time complexity analysis of SidNet, showing SidNet is linearly scalable w.r.t. the numbers of edges.
+* **Experiments.** Extensive experiments show that SidNet effectively learns node representations of signed social graphs for link sign prediction, giving at least 3.9% higher accuracy than the state-of-the-art models in real datasets.
+
+
+
 
 ## Prerequisites
 * python 3.6+
